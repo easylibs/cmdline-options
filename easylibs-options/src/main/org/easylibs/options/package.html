@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head></head>
+<body>
+	<p>Provides command line argument parsing using user defined
+		options.</p>
+
+	<h2>Example - using bean options</h2>
+	<code>
+		<pre>
+public class Example6 {
+
+	/* Collection option */
+	&#64;Arg
+	private static List&lt;String&gt; filenames;
+
+	&#64;Arg
+	private volatile static boolean option2;
+
+	public static void main(String[] ignored) throws OptionException {
+
+		// Supply arguments for example consistancy
+		final String[] argv = new String[] {
+				"--filenames=f1,f2,f3,f4,f5",
+				"--",
+				"random string"
+		};
+
+		/*
+		 * The ofOptional() method only returns the Args parser on success, otherwise it
+		 * calls the default error handler and returns an empty value.
+		 */
+		final Optional&lt;Args&gt; argsOptional = Args.ofOptional(argv, Example6.class);
+
+		if (argsOptional.isPresent()) {
+			final Args args = argsOptional.get();
+
+			/* Print out the state object fields */
+			System.out.println("-- Example 6 - matched options:");
+			args.getMatchedOptions().forEach(System.out::println);
+			System.out.println();
+
+			System.out.println("Unmatched options:");
+			args.getUnmatchedOptions().forEach(System.out::println);
+			System.out.println();
+
+			/* Anything that was unmatched by the parser is stored here */
+			System.out.println("Unmatched args:");
+			args.getUnmatchedArgs().forEach(System.out::println);
+			System.out.println();
+		}
+	}
+}
+	
+	
+		</pre>
+	</code>
+</body>
+</html>
