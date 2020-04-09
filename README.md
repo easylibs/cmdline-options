@@ -45,19 +45,18 @@ random string
 ```
 --
 **Note:** If you need the smallest footprint possible or you are very familiar with the *unix/gnu* version of `getopt(3)` implementation, you can use the **getopt** package which provides lower level API but a less convenient parser, all in an extremely tiny footprint.
-## Installation and Confirguration
+## Installation and Configuration
 ### Prerequisites
 + None
 ### Java JRE Requirement
 + JRE 8 or above
 ### Installation
-+ Download the jar file
-+ Compile the `src/getopt` and `src/options` sources
-+ **Todo:** release popular binary packages such as `maven`
++ Download the jar file(s)
++ Add to java `classpath`
 ## License
 + [MIT License](https://choosealicense.com/licenses/mit)
-## Javadocs documentation
-+ [Easylibs Options Javadocs](https://easylibs.github.io/cmdline-options)
+## Javadocs Documentation
++ Options and Getopt: [javadocs](https://easylibs.github.io/cmdline-options)
 ## Downloads
-+ Getopt Version 1.0: [download](https://github.com/easylibs/cmdline-options/releases/download/v1.0/easylibs-getopt-1.0.jar)
-+ Options Version 1.0: [download](https://github.com/easylibs/cmdline-options/releases/download/v1.0/easylibs-options-1.0.jar)
++ Getopt Version 1.0: [`jar (10KB)`](https://github.com/easylibs/cmdline-options/releases/download/v1.0/easylibs-getopt-1.0.jar)
++ Options Version 1.0: [`jar (50KB)`](https://github.com/easylibs/cmdline-options/releases/download/v1.0/easylibs-options-1.0.jar)
