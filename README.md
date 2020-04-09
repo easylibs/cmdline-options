@@ -1,5 +1,5 @@
-# Easylib Command Line Options
-[Easylib Options](https://github.com/easylibs/cmdline-options) is a minimalist easy to use command line argument parser for the Java programming language. Using a tiny footprint, you can parse command line arguments with a few lines of code.
+# Java Command Line Parser - Easylibs Options
+[Easylib Options](https://github.com/easylibs/cmdline-options) is a minimalist, easy to use command line argument parser for the Java programming language. Using a tiny footprint, you can parse command line arguments with just a few lines of code.
 
 ![Preview - Example 7](https://user-images.githubusercontent.com/18365790/78848880-04999d00-79e1-11ea-82af-e3eb1f26c306.png)
 [Source: Example 7](https://github.com/easylibs/cmdline-options/blob/master/src/example/org/easylibs/options/examples/Example7.java)
