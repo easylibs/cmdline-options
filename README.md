@@ -56,3 +56,5 @@ random string
 + **Todo:** release popular binary packages such as `maven`
 ## License
 + [MIT License](https://choosealicense.com/licenses/mit)
+## Javadocs documentation
++ [Easylibs Options Javadocs](https://easylibs.github.io/cmdline-options)
