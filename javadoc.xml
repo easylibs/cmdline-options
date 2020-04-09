@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project default="javadoc">
 	<target name="javadoc">
-		<javadoc access="public" author="true" classpath="/home/mark/eclipse-jee-2019-06/plugins/org.junit_4.12.0.v201504281640/junit.jar:/home/mark/eclipse-jee-2019-06/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar" destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" 
+		<javadoc access="public" author="true" classpath="/home/mark/eclipse-jee-2019-06/plugins/org.junit_4.12.0.v201504281640/junit.jar:/home/mark/eclipse-jee-2019-06/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar" 
+			destdir="docs" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" 
 			packagenames="org.easylibs.getopt,org.easylibs.options,org.easylibs.options.util" source="1.8" 
 			sourcepath="src/getopt:src/main:src/example" splitindex="true" use="true" version="true" />
 	</target>
