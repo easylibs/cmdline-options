@@ -1,12 +1,12 @@
-package org.easylibs.extoptions;
+package org.easylibs.experimental;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.easylibs.options.TypeMapper;
 import org.easylibs.options.dialect.Dialect;
 import org.easylibs.options.graph.OptionNode;
-import org.easylibs.options.util.TypeMapper;
 
 public interface ComplexOption<T> extends Choice, HasOptionName {
 

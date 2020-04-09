@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import org.easylibs.extoptions.CompoundOption;
+import org.easylibs.experimental.CompoundOption;
+import org.easylibs.options.TypeMapper;
 import org.easylibs.options.dialect.Dialect;
 import org.easylibs.options.dialect.Match;
-import org.easylibs.options.util.TypeMapper;
 
 public class CompoundNode extends LeafNode implements CompoundOption {
 

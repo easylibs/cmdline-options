@@ -4,16 +4,16 @@ import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import org.easylibs.extoptions.Group;
-import org.easylibs.extoptions.NoSuchOptionException;
-import org.easylibs.extoptions.ComplexOption;
+import org.easylibs.experimental.ComplexOption;
+import org.easylibs.experimental.Group;
+import org.easylibs.experimental.NoSuchOptionException;
+import org.easylibs.options.TypeRegistry;
 import org.easylibs.options.dialect.Dialect;
-import org.easylibs.options.util.OptionsRegistry;
 
 public class GraphNode extends BranchNode implements Graph {
 
 	private final LookupVisitor lookup = new LookupVisitor(this);
-	private final OptionsRegistry registry = OptionsRegistry.global();
+	private final TypeRegistry registry = TypeRegistry.global();
 
 	public GraphNode() {
 		super("root");
@@ -24,7 +24,7 @@ public class GraphNode extends BranchNode implements Graph {
 	}
 
 	@Override
-	public OptionsRegistry registry() {
+	public TypeRegistry registry() {
 		return registry;
 	}
 
@@ -46,7 +46,7 @@ public class GraphNode extends BranchNode implements Graph {
 	@Override
 	protected <N> Optional<N> findDown(Class<N> type, Predicate<N> filter) {
 
-		if (type == OptionsRegistry.class) {
+		if (type == TypeRegistry.class) {
 			return Optional.of((N) registry);
 		}
 
@@ -114,7 +114,7 @@ public class GraphNode extends BranchNode implements Graph {
 				.orElseThrow(NoSuchOptionException::new);
 	}
 
-	public OptionsRegistry getRegistry() {
+	public TypeRegistry getRegistry() {
 		return registry;
 	}
 

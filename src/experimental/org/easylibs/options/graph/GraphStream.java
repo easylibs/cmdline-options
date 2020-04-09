@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-import org.easylibs.extoptions.ComplexOption;
+import org.easylibs.experimental.ComplexOption;
 
 public class GraphStream extends AbstractSpliterator<ComplexOption<?>> implements GraphVisitor {
 

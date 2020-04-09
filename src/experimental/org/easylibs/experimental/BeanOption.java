@@ -21,67 +21,39 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package org.easylibs.options;
+package org.easylibs.experimental;
 
-import java.util.Optional;
+import java.lang.reflect.Field;
 
-// TODO: Auto-generated Javadoc
-/**
- * The Class BeanOption.
- */
-class BeanOptionImpl extends SimpleOption<Object> implements BeanOption {
+public interface BeanOption extends ComplexOption<Object> {
 
-	/**
-	 * Gets the generic type.
-	 *
-	 * @return the generic type
-	 */
-	@Override
-	public Optional<Class<?>> getGenericType() {
-		return bean.getGenericType();
+	static BeanOption of(String name, Class<?> cl) throws NoSuchFieldException, SecurityException {
+		throw new UnsupportedOperationException();
 	}
 
-	/** The bean. */
-	private final BeanInfo bean;
-
-	/**
-	 * Instantiates a new bean option.
-	 *
-	 * @param bean the bean
-	 */
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public BeanOptionImpl(BeanInfo bean) {
-		super(bean.getOptionName(), (Class) bean.getType(), bean.isOptional());
-		this.bean = bean;
+	static BeanOption of(String name, Object obj) throws NoSuchFieldException, SecurityException {
+		throw new UnsupportedOperationException();
 	}
 
-	/**
-	 * Sets the value.
-	 *
-	 * @param value the new value
-	 */
-	@Override
-	public void setValue(Object value) {
-		final Object processed = accumulator.accumulate(bean.getValue(), value);
-
-		this.bean.setValue(processed);
-
-		super.store(processed);
+	static BeanOption ofField(Field field) {
+		throw new UnsupportedOperationException();
 	}
 
-	/**
-	 * To string additions.
-	 *
-	 * @return the string
-	 */
-	@Override
-	protected String toStringAdditions() {
-		return ", " + bean.toString();
+	static BeanOption ofField(Field field, Object obj) {
+		throw new UnsupportedOperationException();
 	}
 
-	@Override
-	public BeanInfo getBeanInfo() {
-		return bean;
+	static BeanOption ofField(String name, Class<?> cl) throws NoSuchFieldException, SecurityException {
+		throw new UnsupportedOperationException();
+	}
+
+	static BeanOption ofField(String name, Object obj) throws NoSuchFieldException, SecurityException {
+		throw new UnsupportedOperationException();
+	}
+
+	static BeanOption ofMethod(String name, Object obj, Class<?>... parameterTypes)
+			throws NoSuchFieldException, SecurityException {
+		throw new UnsupportedOperationException();
 	}
 
 }

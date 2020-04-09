@@ -1,6 +1,6 @@
 package org.easylibs.options.graph;
 
-import org.easylibs.extoptions.Choice;
+import org.easylibs.experimental.Choice;
 
 public class AbstractChoice extends BranchNode implements Choice {
 

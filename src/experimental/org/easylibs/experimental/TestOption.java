@@ -1,4 +1,4 @@
-package org.easylibs.extoptions;
+package org.easylibs.experimental;
 
 import java.io.File;
 import java.io.FileInputStream;

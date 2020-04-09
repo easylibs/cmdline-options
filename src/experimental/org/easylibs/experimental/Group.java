@@ -1,8 +1,8 @@
-package org.easylibs.extoptions;
+package org.easylibs.experimental;
 
+import org.easylibs.options.Registration;
 import org.easylibs.options.graph.GroupNode;
 import org.easylibs.options.graph.Node;
-import org.easylibs.options.util.Registration;
 
 public interface Group extends Choice, Node {
 
