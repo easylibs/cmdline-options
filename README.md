@@ -30,6 +30,19 @@ The preferred and encouraged usage is to use the **Bean Options** to quickly def
 
 ![Screenshot from 2020-04-08 22-28-12](https://user-images.githubusercontent.com/18365790/78851634-48dc6b80-79e8-11ea-91b9-f5069da7cddd.png)
 [Source: Example 6](https://github.com/easylibs/cmdline-options/blob/master/src/example/org/easylibs/options/examples/Example6.java)
+
+The example uses a **Bean Option** parser, where the `Example 6` annotated class members are used to construct `options` and at the same time parse the command line. The method returns an `Optional<Args>` parser result, if there were no errors, otherwise the default error handler is called and an empty optional is returned. For this example the output looks something like this:
+```
+-- Example 6 - matched options:
+Option [name='filenames', value='[f1, f2, f3, f4, f5]', matches=1, arg-required, Bean [field=Example6::filenames], type=List]
+
+Unmatched options:
+Option [name='option2', Bean [field=Example6::option2], type=boolean]
+
+Unmatched args:
+--
+random string
+```
 --
 **Note:** If you need the smallest footprint possible or you are very familiar with the *unix/gnu* version of `getopt(3)` implementation, you can use the **getopt** package which provides lower level API but a less convenient parser, all in an extremely tiny footprint.
 ## Installation and Confirguration
