@@ -1,6 +1,6 @@
 package org.easylibs.options.graph;
 
-import org.easylibs.extoptions.Rule;
+import org.easylibs.experimental.Rule;
 
 public class RuleNode extends LeafNode {
 

@@ -3,11 +3,11 @@ package org.easylibs.options.graph;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.easylibs.extoptions.Action;
-import org.easylibs.extoptions.Choice;
-import org.easylibs.extoptions.Group;
-import org.easylibs.extoptions.ComplexOption;
-import org.easylibs.options.util.Registration;
+import org.easylibs.experimental.Action;
+import org.easylibs.experimental.Choice;
+import org.easylibs.experimental.ComplexOption;
+import org.easylibs.experimental.Group;
+import org.easylibs.options.Registration;
 
 public class GroupNode extends AbstractChoice implements Group {
 

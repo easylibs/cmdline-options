@@ -2,9 +2,9 @@ package org.easylibs.options.graph;
 
 import java.util.Optional;
 
-import org.easylibs.extoptions.CompoundOption;
+import org.easylibs.experimental.CompoundOption;
+import org.easylibs.options.TypeRegistry;
 import org.easylibs.options.dialect.Dialect;
-import org.easylibs.options.util.OptionsRegistry;
 
 public class LinkerVisitor implements GraphVisitor {
 
@@ -29,8 +29,8 @@ public class LinkerVisitor implements GraphVisitor {
 				.findDown(Dialect.class)
 				.orElseThrow(IllegalStateException::new);
 
-		final OptionsRegistry registry = option
-				.findDown(OptionsRegistry.class)
+		final TypeRegistry registry = option
+				.findDown(TypeRegistry.class)
 				.orElseThrow(IllegalStateException::new);
 
 		final String definition = option.definition;
@@ -51,7 +51,7 @@ public class LinkerVisitor implements GraphVisitor {
 
 	}
 
-	private Optional<Class<?>> parseValueTypeFromValueName(OptionsRegistry registry, Dialect dialect, String name) {
+	private Optional<Class<?>> parseValueTypeFromValueName(TypeRegistry registry, Dialect dialect, String name) {
 
 		final String[] c = name.split(":");
 

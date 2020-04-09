@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
 
-import org.easylibs.extoptions.CompoundOption;
-import org.easylibs.extoptions.ComplexOption;
+import org.easylibs.experimental.ComplexOption;
+import org.easylibs.experimental.CompoundOption;
 import org.easylibs.options.dialect.Match;
 import org.easylibs.options.dialect.Matcher;
 

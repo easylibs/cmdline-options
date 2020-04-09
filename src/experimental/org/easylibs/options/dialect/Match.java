@@ -2,7 +2,7 @@ package org.easylibs.options.dialect;
 
 import java.util.List;
 
-import org.easylibs.extoptions.ComplexOption;
+import org.easylibs.experimental.ComplexOption;
 
 public interface Match {
 

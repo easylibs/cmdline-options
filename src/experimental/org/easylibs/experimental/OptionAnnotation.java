@@ -21,67 +21,27 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package org.easylibs.options;
+package org.easylibs.experimental;
 
-import java.util.Optional;
+import static java.lang.annotation.ElementType.FIELD;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-// TODO: Auto-generated Javadoc
-/**
- * The Class BeanOption.
- */
-class BeanOptionImpl extends SimpleOption<Object> implements BeanOption {
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
 
-	/**
-	 * Gets the generic type.
-	 *
-	 * @return the generic type
-	 */
-	@Override
-	public Optional<Class<?>> getGenericType() {
-		return bean.getGenericType();
-	}
+@Retention(RUNTIME)
+@Target({ FIELD })
+public @interface OptionAnnotation {
 
-	/** The bean. */
-	private final BeanInfo bean;
+	boolean catchall() default false;
 
-	/**
-	 * Instantiates a new bean option.
-	 *
-	 * @param bean the bean
-	 */
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public BeanOptionImpl(BeanInfo bean) {
-		super(bean.getOptionName(), (Class) bean.getType(), bean.isOptional());
-		this.bean = bean;
-	}
+	boolean clear() default false;
 
-	/**
-	 * Sets the value.
-	 *
-	 * @param value the new value
-	 */
-	@Override
-	public void setValue(Object value) {
-		final Object processed = accumulator.accumulate(bean.getValue(), value);
+	String[] names() default {};
 
-		this.bean.setValue(processed);
+	String usage() default "";
 
-		super.store(processed);
-	}
-
-	/**
-	 * To string additions.
-	 *
-	 * @return the string
-	 */
-	@Override
-	protected String toStringAdditions() {
-		return ", " + bean.toString();
-	}
-
-	@Override
-	public BeanInfo getBeanInfo() {
-		return bean;
-	}
-
+	boolean required() default false;
+	
+	boolean lowercase() default true;
 }

@@ -3,7 +3,7 @@ package org.easylibs.options.graph;
 import java.util.Optional;
 import java.util.function.Predicate;
 
-import org.easylibs.extoptions.HasOptionName;
+import org.easylibs.experimental.HasOptionName;
 
 public class LeafNode implements Node {
 

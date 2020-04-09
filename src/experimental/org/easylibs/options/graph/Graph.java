@@ -5,11 +5,11 @@ import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 
-import org.easylibs.extoptions.Choice;
-import org.easylibs.extoptions.Group;
-import org.easylibs.extoptions.NoSuchOptionException;
-import org.easylibs.options.util.OptionsRegistry;
-import org.easylibs.extoptions.ComplexOption;
+import org.easylibs.experimental.Choice;
+import org.easylibs.experimental.ComplexOption;
+import org.easylibs.experimental.Group;
+import org.easylibs.experimental.NoSuchOptionException;
+import org.easylibs.options.TypeRegistry;
 
 public interface Graph extends Choice {
 
@@ -47,5 +47,5 @@ public interface Graph extends Choice {
 		return GraphStream.options((GraphNode) this);
 	}
 
-	OptionsRegistry registry();
+	TypeRegistry registry();
 }

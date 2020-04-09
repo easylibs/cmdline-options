@@ -3,7 +3,7 @@ package org.easylibs.options.graph;
 import java.util.Optional;
 import java.util.function.Predicate;
 
-import org.easylibs.extoptions.ComplexOption;
+import org.easylibs.experimental.ComplexOption;
 
 public class LookupVisitor implements GraphVisitor {
 

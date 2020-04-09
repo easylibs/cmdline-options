@@ -4,12 +4,12 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-import org.easylibs.extoptions.CompoundOption;
-import org.easylibs.extoptions.ComplexOption;
+import org.easylibs.options.TypeRegistry;
+import org.easylibs.experimental.ComplexOption;
+import org.easylibs.experimental.CompoundOption;
+import org.easylibs.options.TypeMapper;
 import org.easylibs.options.dialect.Dialect;
 import org.easylibs.options.dialect.Match;
-import org.easylibs.options.util.TypeMapper;
-import org.easylibs.options.util.OptionsRegistry;
 
 public class OptionNode<T> extends AbstractChoice implements ComplexOption<T> {
 
@@ -29,7 +29,7 @@ public class OptionNode<T> extends AbstractChoice implements ComplexOption<T> {
 	@SuppressWarnings("unchecked")
 	private TypeMapper<T> typeMapper = a -> (T) a;
 
-	OptionsRegistry registry;
+	TypeRegistry registry;
 
 	public OptionNode(final String definition) {
 		super(null);
