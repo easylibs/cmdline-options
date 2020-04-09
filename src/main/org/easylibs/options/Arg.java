@@ -71,8 +71,8 @@ public @interface Arg {
 	String name() default "";
 
 	/**
-	 * If a {@link BeanOptionImpl} takes an argument, this attribute makes the argument
-	 * optional.
+	 * If a {@link BeanOptionImpl} takes an argument, this attribute makes the
+	 * argument optional.
 	 * 
 	 * <p>
 	 * If argument is optional and is not present on the command line, the reflected
@@ -88,14 +88,14 @@ public @interface Arg {
 	 * </p>
 	 *
 	 * @return true, if argument value is optional, otherwise it is required.
-	 *         Default if {@code false}.
+	 *         Default is {@code false}.
 	 */
 	boolean optional() default false;
 
 	/**
-	 * The class field or setter method is ommitted as an options Useful when an
-	 * annotated class implicitely defines options for every class field but you
-	 * want to skip a particular one.
+	 * The class member is ommitted as consideration for being an option. This is
+	 * useful when an annotated class implicitely defines options for every class
+	 * member but you want to skip a particular one.
 	 *
 	 * @return true, if to be ignored and ommitted as an option
 	 */
