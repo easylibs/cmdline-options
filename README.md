@@ -58,3 +58,6 @@ random string
 + [MIT License](https://choosealicense.com/licenses/mit)
 ## Javadocs documentation
 + [Easylibs Options Javadocs](https://easylibs.github.io/cmdline-options)
+## Downloads
++ Getopt Version 1.0: [download](https://github.com/easylibs/cmdline-options/releases/download/v1.0/easylibs-getopt-1.0.jar)
++ Options Version 1.0: [download](https://github.com/easylibs/cmdline-options/releases/download/v1.0/easylibs-options-1.0.jar)
