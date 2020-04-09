@@ -21,11 +21,16 @@ That's it! pass in the command line argument array `String[] argv` from your mai
 args.forEach(System.out::println);
 ```
 which will iterate over each option which was present on the command line and print out its state information, including the option's integer argument. The output may look something like this:
-```shell
+```
 Option [name='optionA', value='987', matches=1, arg-required, type=int]
 ```
 if a `--optionA=987` was specified on the command line.
 
+The preferred and encouraged usage is to use the **Bean Options** to quickly define and have the command line state be reflected immediately in you java class members (or beans).
+
+![Screenshot from 2020-04-08 22-28-12](https://user-images.githubusercontent.com/18365790/78851634-48dc6b80-79e8-11ea-91b9-f5069da7cddd.png)
+[Source: Example 6](https://github.com/easylibs/cmdline-options/blob/master/src/example/org/easylibs/options/examples/Example6.java)
+--
 **Note:** If you need the smallest footprint possible or you are very familiar with the *unix/gnu* version of `getopt(3)` implementation, you can use the **getopt** package which provides lower level API but a less convenient parser, all in an extremely tiny footprint.
 ## Installation and Confirguration
 ### Prerequisites
