@@ -27,3 +27,14 @@ Option [name='optionA', value='987', matches=1, arg-required, type=int]
 if a `--optionA=987` was specified on the command line.
 
 **Note:** If you need the smallest footprint possible or you are very familiar with the *unix/gnu* version of `getopt(3)` implementation, you can use the **getopt** package which provides lower level API but a less convenient parser, all in an extremely tiny footprint.
+## Installation and Confirguration
+### Prerequisites
++ None
+### Java JRE Requirement
++ JRE 8 or above
+### Installation
++ Download the jar file
++ Compile the `src/getopt` and `src/options` sources
++ **Todo:** release popular binary packages such as `maven`
+## License
++ [MIT License](https://choosealicense.com/licenses/mit)
