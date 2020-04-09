@@ -53,19 +53,19 @@ public class TestOptions {
 		};
 
 		final Option<?>[] optionArray = {
-				Option.named("0"),
-				Option.named("1"),
-				Option.named("2"),
+				Option.of("0"),
+				Option.of("1"),
+				Option.of("2"),
 
-				Option.named("a"),
-				Option.named("b"),
-				Option.named("c", int.class),
-				Option.named("d", String.class),
-				Option.namedOptional("add", String.class),
-				Option.named("append"),
+				Option.of("a"),
+				Option.of("b"),
+				Option.of("c", int.class),
+				Option.of("d", String.class),
+				Option.ofOptional("add", String.class),
+				Option.of("append"),
 //				BeanOption.of(this, "delete"),
-				Option.named("verbose"),
-				Option.named("create", String.class),
+				Option.of("verbose"),
+				Option.of("create", String.class),
 //				Option.of("file", String.class),
 //				BeanOption.of(this, "file"),
 		};
@@ -93,7 +93,7 @@ public class TestOptions {
 		TestCase.assertEquals("filename1.txt", file);
 
 		TestCase.assertTrue(options.find("add", String.class).isPresent());
-		TestCase.assertEquals("123", options.find("add", String.class).get().value());
+		TestCase.assertEquals("123", options.find("add", String.class).get().getValue());
 	}
 
 	static boolean b = true;
